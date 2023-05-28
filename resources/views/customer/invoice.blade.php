@@ -42,8 +42,8 @@
                         <tr class="btn-info">
                             <td colspan="3">
                                 Silahkan anda transfer ke BRI :<br>
-                                Atas Nama<b><i>Sheptian Bagja Utama</i></b></br>
-                                No.Rekening<b><i>2378491237</i></b>
+                                Atas Nama<b><i>&nbsp;&nbsp;Admin Sakinah Mart</i></b></br>
+                                No.Rekening<b><i>&nbsp;&nbsp;2378491237</i></b>
                             </td>
                         </tr>
                     </table>

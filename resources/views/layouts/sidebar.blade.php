@@ -37,7 +37,12 @@
             <li class="active"><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
             <li><a href="{{ route('category.index') }}"><i class="fa fa-bars"></i> <span>Category</span></a></li>
             <li><a href="{{ route('product.index') }}"><i class="fa fa-cube"></i> <span>Product</span></a></li>
-            <li><a href="{{ route('confirmAdmin') }}"><i class="fa fa-dollar "></i> <span>Konfirmasi Pembayaran</span></a></li>
+            <li><a href="{{ route('confirmAdmin') }}"><i class="fa fa-dollar "></i> <span>Konfirmasi Pembayaran</span>
+            @php
+            $totalConfirms = \App\Confirm::where('status_order','menunggu verifikasi')->count();
+            @endphp
+            <small class="label pull-right bg-maroon-active">{{ $totalConfirms }}</small>
+            </a></li>
             <li class="active"><a href="{{ url('/order') }}"><i class="fa  fa-exchange"></i> <span>List Order</span></a></li>
         </ul>
         @endif
