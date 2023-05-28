@@ -74,7 +74,7 @@ desired effect
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>T</b>K</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><img src="{{ asset('tokopedia.png') }}" width="130px"></span>
+            <span class="logo-lg"><img src="{{ asset('images/sakinah.jpeg') }}" width="50px"></span>
         </a>
 
         <!-- Header Navbar -->

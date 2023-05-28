@@ -8,6 +8,9 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+                <div class="text-center my-3">
+                        <span class="logo-lg"><img src="{{ asset('images/sakinah.jpeg') }}" width="175px"></span>
+                    </div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
