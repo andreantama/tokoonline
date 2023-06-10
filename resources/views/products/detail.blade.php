@@ -76,6 +76,10 @@
 
                         <h3>Description</h3>
                         <h4>{{ $product->description }}</h4>
+                        <h3>Satuan</h3>
+                        <h4>{{ $product->satuan }}</h4>
+                        <h3>Berat / {{ $product->satuan }}</h3>
+                        <h4>{{ $product->berat }} Kg</h4>
                         <br>
                         <p><a href="{{ url('add-to-cart/'.$product->id) }}" class="btn btn-success btn-block"><b>Add To Cart</b></a>
                             <a href="#" class="btn btn-dropbox btn-block"><b>Detail</b></a></p>

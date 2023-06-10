@@ -57,6 +57,17 @@
                         <input type="text" class="form-control" id="stock" name="stock" placeholder="Enter stock" value="{{ $product->stock }}" autofocus required>
                     </div>
 
+                     <div class="form-group">
+                        <label>Satuan</label>
+                        <input type="text" class="form-control" id="satuan" name="satuan" placeholder="Enter satuan" value="{{ $product->satuan }}" autofocus required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Berat (Kg)</label>
+                        <input type="text" class="form-control" id="berat" name="berat" placeholder="Enter berat" value="{{ $product->berat }}" autofocus required>
+                    </div>
+
+
                     <div class="form-group">
                         <label>Image</label>
                         <input type="file" class="form-control" id="image" name="image" placeholder="Enter image" required>

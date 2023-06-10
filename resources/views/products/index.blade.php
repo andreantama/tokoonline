@@ -36,6 +36,8 @@
                             <th>Category</th>
                             <th>Price</th>
                             <th>Stock</th>
+                            <th>Satuan</th>
+                            <th>Berat (Kg)</th>
                             <th>Image</th>
                             <th>Status</th>
                             <th></th>
@@ -55,6 +57,8 @@
                             <td>{{ $product->category->name }}</td>
                             <td>Rp. {{ number_format($product->price,0) }}</td>
                             <td>{{ $product->stock }}</td>
+                            <td>{{ $product->satuan }}</td>
+                            <td>{{ $product->berat }}</td>
                             <td><img class="rounded-square" width="50" height="50" src="{{ url($product->image) }}" alt=""></td>
                             <td>
                                 @if($product->status == 'publish')

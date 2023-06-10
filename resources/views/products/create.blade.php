@@ -56,6 +56,16 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Satuan</label>
+                        <input type="text" class="form-control" id="satuan" name="satuan" placeholder="Enter satuan" value="{{ old('satuan') }}" autofocus required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Berat (Kg)</label>
+                        <input type="text" class="form-control" id="berat" name="berat" placeholder="Enter berat" value="{{ old('berat') }}" autofocus required>
+                    </div>
+
+                    <div class="form-group">
                         <label>Image</label>
                         <input type="file" class="form-control" id="image" name="image" placeholder="Enter image" value="{{ old('image') }}"  required>
                     </div>
