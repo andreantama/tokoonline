@@ -25,7 +25,7 @@
                     </div>
             @endif
 
-
+             <a class="btn btn-success" href="{{ Route('category.create') }}">Tambah Kategori</a>
             <!-- /.box-header -->
                 <div class="box-body">
                     <table id="categories" class="table table-bordered table-hover">
