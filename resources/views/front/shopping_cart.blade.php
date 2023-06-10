@@ -75,8 +75,9 @@
                         <tr>
                             <td>{{ $product->name }}</td>
                             <td>
-                                <div class="input-group col-xs-10">
-                                    <input type="text" placeholder="{{ $product->qty }}" class="form-control" style="size: 300px;" disabled>
+                                <div class="col-xs-10">
+                                    <input type="text" placeholder="{{ $product->qty }}"  class="form-control" style="size: 300px;" disabled>
+                                    <br>
                                     <span class="input-group-btn">
                                       <button rowId="{{ $product->rowId }}" type="button" class="btn btn-danger kurangi-qty">+ Kurangi</button>
 
