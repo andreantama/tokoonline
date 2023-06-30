@@ -54,6 +54,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/order_lunas/excel','OrderController@exportExcelPaid')->name('order_lunas.excel');
 
     Route::resource('product','ProductController');
+    Route::resource('ongkir','OngkirController');
     Route::get('productAdmin/detail/{id}','ProductController@detail')->name('product.detail');
     Route::resource('category','CategoryController');
 });
