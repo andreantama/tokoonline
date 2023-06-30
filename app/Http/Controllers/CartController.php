@@ -13,6 +13,7 @@ use Session;
 use Cart;
 use App\Order;
 use App\Order_Product;
+use App\Ongkir;
 
 
 class CartController extends Controller
@@ -52,7 +53,10 @@ class CartController extends Controller
     public function checkout()
     {
         $this->middleware('role:customer');
-        return view('customer.checkout');
+        $Ongkir = Ongkir::whereNull('deleted_at')->get();
+        return view('customer.checkout',[
+            'ongkir' => $Ongkir
+        ]);
     }
 
     public function bayar(Request $request)
@@ -62,16 +66,20 @@ class CartController extends Controller
         $address = $request->address;
         $total_bayar = 0;
 
+        $ongkir = Ongkir::where('id_ongkir', $request->id_ongkir)->first();
+
         $keranjang = Cart::content();
         foreach ($keranjang as $cart){
             $total_bayar += $cart->subtotal;
         }
+        $total_bayar += $ongkir->price;
 
         $order = new Order;
         $order->user_id = $user_id;
         $order->receiver = $receiver;
         $order->address = $address;
         $order->total_price = $total_bayar;
+        $order->ongkir_id = $ongkir->id_ongkir;
         $order->date = Carbon::now();
         $order->save();
 

@@ -51,6 +51,18 @@
                             </tr>
                         @endforeach
 
+                         <tr class="btn-success">
+                            <td colspan="3" align="center" style="font-size: medium">Ongkir ({{ empty($detail->ongkir_id) == false ? $detail->ongkir->name : '-' }})</td>
+                            <td align="center" style="font-size: medium">
+                            @php
+                            if(empty($detail->ongkir_id) == false) {
+                                echo " Rp. ".number_format($detail->ongkir->price,0);
+                            } else {
+                                echo " Rp. ".number_format(0,0);
+                            }
+                            @endphp</td>
+                        </tr>
+
                         <tr class="btn-success">
                             <td colspan="3" align="center" style="font-size: medium">Total</td>
                             <td align="center" style="font-size: medium">Rp. {{ number_format($detail->order->total_price,0) }}</td>

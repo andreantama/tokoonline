@@ -16,7 +16,7 @@ class OngkirController extends Controller
     public function index(Request $request)
     {
         $title = 'Master Ongkir';
-        $ongkir = Ongkir::orderBy('name','asc')->whereNull('delete_at')->get();
+        $ongkir = Ongkir::orderBy('name','asc')->whereNull('deleted_at')->get();
         return view('ongkir.index', compact('title','ongkir'));
     }
 
@@ -55,7 +55,7 @@ class OngkirController extends Controller
         $ongkir = Ongkir::findOrFail($id);
 
         Ongkir::find($id)->update([
-            'delete_at' => Carbon::now()
+            'deleted_at' => Carbon::now()
         ]);
         return redirect()->back()->with('status','Anda berhasil menghapus ongkir '.$ongkir->name);
     }

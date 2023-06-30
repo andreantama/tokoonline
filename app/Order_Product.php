@@ -18,4 +18,9 @@ class Order_Product extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
+    public function ongkir()
+    {
+        return $this->belongsTo('App\ongkir', 'id_ongkir', 'ongkir_id');
+    }
 }

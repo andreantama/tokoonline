@@ -37,6 +37,15 @@
                         <label>Address</label>
                         <textarea name="address" class="form-control"  cols="26" rows="5"></textarea>
                     </div>
+
+                    <div class="form-group">
+                        <label for="ongkir">Pilih Kurir / Paket Ongkos Kirim</label>
+                        <select name="id_ongkir" class="form-control">
+                            @foreach ($ongkir as $row)
+                                <option value="{{ $row->id_ongkir }}">{{ "(".$row->name.") Rp.".number_format($$row->price, 0) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 <!-- /.box-body -->
 
                 <div class="box-footer">
