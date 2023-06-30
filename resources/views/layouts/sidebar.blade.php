@@ -52,7 +52,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">CUSTOMER MENU</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('/invoice/list') }}"><i class="fa fa-reply"></i> <span>List Konfirmasi Order</span></a></li>
+            <li class="active"><a href="{{ url('/invoice/list') }}"><i class="fa fa-reply"></i> <span>List Order</span></a></li>
 
         </ul>
         @endif
